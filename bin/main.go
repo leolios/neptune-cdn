@@ -10,6 +10,7 @@ import (
 	"io"
 	"log"
 	"net/http"
+	"os"
 	"strconv"
 )
 
@@ -23,6 +24,7 @@ var router = mux.NewRouter()
 func main() {
 	port := os.Getenv("PORT")
 	mongouri := os.Getenv("MongoDB")
+	clientOptions := options.Client().ApplyURI(mongouri)
 	client, e := mongo.Connect(context.TODO(), clientOptions)
 	CheckError(e)
 	log.Println("SUCCESSFULLY CONNECTED")
