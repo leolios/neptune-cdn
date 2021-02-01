@@ -1,2 +1,2 @@
-# neptune-image
+# neptune-cdn
 Neptune image handler
