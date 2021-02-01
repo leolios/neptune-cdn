@@ -1,2 +1,2 @@
 # neptune-cdn
-Neptune image handler
+Neptune content delivery network  handler
